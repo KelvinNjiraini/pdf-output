@@ -1,0 +1,94 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@page {
+    size: A4 portrait;
+    margin: 14mm 8mm;
+}
+body {
+    -webkit-print-color-adjust: exact;
+    font-family: 'Lexend', sans-serif;
+}
+
+table {
+    text-indent: 0;
+    border-color: inherit;
+    border-collapse: collapse;
+    border-spacing: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: auto;
+}
+
+.overall-body {
+    min-height: 100vh;
+    position: relative;
+}
+
+.overall-body::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0.02;
+    filter: grayscale(100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('./images/value8-watermark.svg');
+    background-repeat: repeat space;
+    background-size: 69%;
+    margin-bottom: 1rem;
+}
+
+.form-heading {
+    color: #000000;
+    text-transform: uppercase;
+    font-size: 11px;
+    line-height: 1.4;
+    font-weight: bold;
+}
+
+.base-text {
+    color: #000000;
+    text-transform: uppercase;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.secondary-text {
+    color: #9a9a9a;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.base-cell {
+    padding: 9px 0;
+    border-right: 2px solid #000000;
+    vertical-align: top;
+}
+
+.secondary-cell {
+    padding: 9px 0;
+    padding-left: 9px;
+    vertical-align: top;
+}
+
+.tertiary-cell {
+    padding: 9px 0;
+    padding-left: 9px;
+    border-right: 2px solid #000000;
+    vertical-align: top;
+}
+
+.underline {
+    border-bottom: 2px solid #000000;
+    padding-bottom: 2px;
+    margin-right: 10px;
+}
